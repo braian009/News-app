@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Local
     'accounts',
     'pages',
+    'articles',
     # 3rd Party
     'crispy_forms',
 
@@ -111,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Buenos_Aires'
 
 USE_I18N = True
 
@@ -134,3 +135,12 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+DEFAULT_FROM_EMAIL = 'braianyanquin@gmail.com'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
